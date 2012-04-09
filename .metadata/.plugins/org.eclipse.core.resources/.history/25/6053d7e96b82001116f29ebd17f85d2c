@@ -1,0 +1,25 @@
+package org.kimego.demos.db.persistence;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+import org.springframework.test.context.ContextConfiguration;
+
+@RunWith(JUnit4.class)
+@ContextConfiguration({"classpath:test-context.xml"})
+public class UserDaoImplIntegrationTests {
+
+	private static final Long USER_ID = 1L;
+	private IUserDao repo;
+
+	@Before
+	public void TestsInitialization() {
+		
+	}
+	
+	@Test
+	public void UserDaoImplFindByIdReturnsUserEntityWithThatIdIfItWasFound() {
+		repo.findUserById(USER_ID);
+	}
+}

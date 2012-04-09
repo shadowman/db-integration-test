@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="UserDaoImplIntegrationTests" project="db-integration-demo" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="org.kimego.demos.db.persistence.UserDaoImplIntegrationTests" time="1.765">
+    <testcase name="UserDaoImplFindByIdReturnsUserEntityWithThatIdIfItWasFound" classname="org.kimego.demos.db.persistence.UserDaoImplIntegrationTests" time="1.763"/>
+    <testcase name="UserDaoImplFindByIdReturnsNullIfEntityWithThatIdWasNotFound" classname="org.kimego.demos.db.persistence.UserDaoImplIntegrationTests" time="0.002"/>
+  </testsuite>
+</testrun>

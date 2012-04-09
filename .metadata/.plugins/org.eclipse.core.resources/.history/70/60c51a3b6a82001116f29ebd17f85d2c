@@ -1,0 +1,15 @@
+package org.kimego.demos.db.persistence;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserDaoImpl {
+	
+	@Autowired
+	public UserDaoImpl(EntityManager manager) {
+		this.manager = manager;
+	}
+}

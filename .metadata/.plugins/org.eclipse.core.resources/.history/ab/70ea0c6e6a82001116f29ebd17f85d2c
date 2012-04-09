@@ -1,0 +1,9 @@
+package org.kimego.demos.db.domain;
+
+public class User {
+	private Long id;
+
+	public Long getId() {
+		return this.id;
+	}
+}

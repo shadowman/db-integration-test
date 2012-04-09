@@ -1,0 +1,54 @@
+package org.kimego.demos.db.persistence;
+
+import junit.framework.Assert;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.kimego.demos.db.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("classpath:test-context.xml")
+public class UserDaoImplIntegrationTests {
+
+	private static final Long USER_ID = 1L;
+
+	private static final long NON_EXISTENT_USER_ID = 0;
+	
+	@Autowired
+	private ApplicationContext context;
+	
+	private IUserDao repo;
+
+	@Before
+	public void TestsInitialization() {
+		repo = context.getBean(IUserDao.class);
+	}
+	
+	
+	@Test
+	public void UserDaoImplFindByIdReturnsUserEntityWithThatIdIfItWasFound() {
+		User user = repo.findUserById(USER_ID);
+		
+		Assert.assertNotNull(user);
+	}
+	
+	@Test
+	public void UserDaoImplFindByIdReturnsNullIfEntityWithThatIdWasNotFound() {
+		User user = repo.findUserById(NON_EXISTENT_USER_ID);
+		
+		Assert.assertNull(user);
+	}
+	
+	@Test
+	public void UserDaoImplSaveStoresNewEntityInDatabase() {
+		
+		User user = new User();
+		
+		user = repo.save(user);
+	}
+}

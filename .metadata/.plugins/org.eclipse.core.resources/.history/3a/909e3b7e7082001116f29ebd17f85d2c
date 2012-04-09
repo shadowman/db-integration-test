@@ -1,0 +1,38 @@
+package org.kimego.demos.db.persistence;
+
+import java.util.Collection;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.kimego.demos.db.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserDaoImpl implements IUserDao {
+	
+	@PersistenceContext
+	private EntityManager manager;
+
+	@Autowired
+	public UserDaoImpl(EntityManager manager) {
+		this.setManager(manager);
+	}
+	
+	protected EntityManager getManager() {
+		return manager;
+	}
+
+	private void setManager(EntityManager manager) {
+		this.manager = manager;
+	}
+
+	public User findUserById(long uid) {
+		return null;
+	}
+
+	public Collection<User> findUsersByName(String partialName) {
+		return null;
+	}
+}

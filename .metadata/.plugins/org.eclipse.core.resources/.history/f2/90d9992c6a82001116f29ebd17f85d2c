@@ -1,0 +1,10 @@
+package org.kimego.demos.db.persistence;
+
+import javax.persistence.EntityManager;
+
+@Service
+public class UserDaoImpl {
+	public void UserDaoImpl(EntityManager manager) {
+		this.manager = manager;
+	}
+}

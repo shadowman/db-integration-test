@@ -1,0 +1,49 @@
+package org.kimego.demos.db.persistence;
+
+import java.util.Collection;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
+
+import org.kimego.demos.db.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@Transactional
+public class UserDaoImpl implements IUserDao {
+	
+	private EntityManagerFactory factory;
+
+	@Autowired
+	public UserDaoImpl(EntityManagerFactory factory) {
+		this.setFactory(factory);
+	}
+	
+	public User findUserById(long uid) {
+		EntityManager manager = getFactory().createEntityManager();
+		TypedQuery<User> query = manager.createQuery("select u from User u where u.id = :id", User.class);
+		query.setParameter("id", uid);
+		return query.getSingleResult();
+	}
+
+	public Collection<User> findUsersByName(String partialName) {
+		return null;
+	}
+
+	protected EntityManagerFactory getFactory() {
+		return factory;
+	}
+
+	private void setFactory(EntityManagerFactory factory) {
+		this.factory = factory;
+	}
+
+	public void save(User user) {
+		EntityManager manager = getFactory().createEntityManager();
+		manager.persist(user);
+		manager.close();
+	}
+}
