@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testrun name="Rerun org.kimego.demos.db.persistence.UserDaoImplIntegrationTests.UserDaoImplSaveStoresNewEntityInDatabase" project="db-integration-demo" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testcase name="UserDaoImplSaveStoresNewEntityInDatabase" classname="org.kimego.demos.db.persistence.UserDaoImplIntegrationTests" time="24.933"/>
-</testrun>

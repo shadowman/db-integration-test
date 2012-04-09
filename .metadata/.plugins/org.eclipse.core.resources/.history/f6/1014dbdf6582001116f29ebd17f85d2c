@@ -1,5 +1,0 @@
-package org.kimego.demos.domain;
-
-public class UserDaoImplIntegrationTest {
-
-}
