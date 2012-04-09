@@ -1,5 +1,0 @@
-INDEX VERSION 1.126
-D:\Java\Eclipse Workspaces\Dbs Integration Tests\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2575729927.index
-\db-integration-tests\src\main\java
-D:\Java\Eclipse Workspaces\Dbs Integration Tests\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\78660915.index
-\db-integration-tests\src\main\java

@@ -1,3 +1,0 @@
-INSERT INTO USERS (ID, USER_NAME, USER_PASS) VALUES (1, "jdoe", "password");
-INSERT INTO USERS (ID, USER_NAME, USER_PASS) VALUES (2, "admin", "secret");
-INSERT INTO USERS (ID, USER_NAME, USER_PASS) VALUES (3, "user", "userPassword");
