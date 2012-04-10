@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration("classpath:test-context.xml")
 public class UserDaoImplIntegrationTests {
 
-	private static final Long USER_ID = 1L;
+	private static final Long USER_ID = 100L;
 
 	private static final long NON_EXISTENT_USER_ID = 0;
 	
@@ -48,8 +48,9 @@ public class UserDaoImplIntegrationTests {
 	
 	@Test
 	public void UserDaoImplSaveStoresNewEntityInDatabase() {
-		
 		User user = new User();
+		user.setUsername("user");
+		user.setPassword("secret");
 		
 		repo.save(user);
 		

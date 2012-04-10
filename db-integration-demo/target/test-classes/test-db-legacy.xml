@@ -24,12 +24,12 @@
 				<property name="databasePlatform" value="${db.dialect}" />
 			</bean>
 		</property>
-		<property name="persistenceUnitName" value="acme" />		
+		<property name="persistenceUnitName" value="acme-legacy" />		
 	</bean>
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${db.driver}" />
-		<property name="url" value="${db.1.url}" />
+		<property name="url" value="${db.2.url}" />
 		<property name="username" value="${db.username}" />
 		<property name="password" value="${db.password}" />
 	</bean>

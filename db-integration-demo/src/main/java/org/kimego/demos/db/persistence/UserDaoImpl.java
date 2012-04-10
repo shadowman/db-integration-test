@@ -8,10 +8,13 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.kimego.demos.db.domain.User;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 @Transactional
 public class UserDaoImpl implements IUserDao {
 	
